@@ -13,7 +13,7 @@
       <div class="col-span-6 flex flex-col gap-3">
         <img
           class="image-container h-96 md:sticky md:top-24"
-          src="~/public/images/mountains.webp"
+          src="~/public/images/selfie.webp"
           alt=""
         />
       </div>
