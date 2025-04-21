@@ -1,6 +1,6 @@
-const siteName = "Template";
-const siteURL = "fictionalweb.com";
-const siteDescription = "Template description";
+const siteName = "Exhumanize";
+const siteURL = "exhumanize.com";
+const siteDescription = "Portfolio of Street Photographer David Jack Sorensen";
 const GTag = "G-SXZDVWQGZX";
 
 const pages = [
