@@ -61,9 +61,103 @@
             <span>//</span>
           </div>
         </div>
-        <div class="relative bottom-0 flex gap-2 overflow-x-hidden">
+        <div class="relative bottom-0 flex gap-2 rotate-180 overflow-x-hidden">
+          <div class="animate-marquee text-white flex gap-2 whitespace-nowrap">
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+          </div>
           <div
-            class="animate-marqueeReverse text-white flex gap-2 whitespace-nowrap"
+            class="absolute text-white flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
+          >
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div
+          class="relative pt-1 flex gap-2 overflow-x-hidden -rotate-90 origin-top-left bg-secondary"
+        >
+          <div class="animate-marquee text-white flex gap-2 whitespace-nowrap">
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+          </div>
+          <div
+            class="absolute pt-1 text-white flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
+          >
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+            <span>Graffiti</span>
+            <span>//</span>
+          </div>
+        </div>
+        <div
+          class="relative flex gap-2 overflow-x-hidden rotate-90 origin-top-right bg-secondary"
+        >
+          <div
+            class="animate-marquee pt-1 text-white flex gap-2 whitespace-nowrap mr-2"
           >
             <span>Graffiti</span>
             <span>//</span>
@@ -85,7 +179,7 @@
             <span>//</span>
           </div>
           <div
-            class="absolute text-white flex gap-2 top-0 animate-marquee2Reverse whitespace-nowrap"
+            class="absolute text-white pt-1 flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
           >
             <span>Graffiti</span>
             <span>//</span>
