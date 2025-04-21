@@ -1,13 +1,13 @@
 <template>
   <NuxtLink :to="href">
     <div
-      class="relative bg-secondary overflow-hidden h-48 py-1 md:h-full"
+      class="relative bg-secondary overflow-hidden h-48 md:h-full"
       @mouseenter="isHovering = true"
       @mouseleave="isHovering = false"
     >
       <!-- Image container with transition -->
       <div
-        class="absolute inset-0 transition-all duration-300 ease-in-out z-10"
+        class="absolute inset-0 transition-all duration-300 ease-in-out z-50"
         :class="isHovering && 'inset-7'"
       >
         <img
@@ -16,189 +16,57 @@
           class="w-full h-48 md:h-full object-cover"
         />
       </div>
+      <!-- top -->
       <div class="flex flex-col justify-between h-full">
-        <div class="relative flex gap-2 overflow-x-hidden">
-          <div class="animate-marquee text-white flex gap-2 whitespace-nowrap">
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-          </div>
+        <div class="flex gap-2 overflow-x-hidden z-40 -translate-x-[1.75rem]">
           <div
-            class="absolute text-white flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
+            class="animate-marquee text-white flex gap-2 whitespace-nowrap bg-secondary z-10 py-1"
           >
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
+            <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
+              <span>{{ text }} </span>
+              <span>//</span>
+            </div>
           </div>
         </div>
-        <div class="relative bottom-0 flex gap-2 rotate-180 overflow-x-hidden">
-          <div class="animate-marquee text-white flex gap-2 whitespace-nowrap">
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-          </div>
+        <!-- bottom  -->
+        <div
+          class="bottom-0 flex gap-2 py-1 rotate-180 bg-secondary overflow-x-hidden z-20"
+        >
           <div
-            class="absolute text-white flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
+            class="animate-marquee text-white flex gap-2 whitespace-nowrap z-20"
           >
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
+            <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
+              <span>{{ text }} </span>
+              <span>//</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="flex flex-col justify-between">
         <div
-          class="relative pt-1 flex gap-2 overflow-x-hidden -rotate-90 origin-top-left bg-secondary"
+          class="flex gap-2 overflow-x-hidden -rotate-90 origin-top-left bg-secondary z-30"
         >
-          <div class="animate-marquee text-white flex gap-2 whitespace-nowrap">
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-          </div>
+          <!-- left  -->
           <div
-            class="absolute pt-1 text-white flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
+            class="animate-marquee text-white flex gap-2 whitespace-nowrap py-1"
           >
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
+            <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
+              <span>{{ text }} </span>
+              <span>//</span>
+            </div>
           </div>
         </div>
+        <!-- right  -->
         <div
-          class="relative flex gap-2 overflow-x-hidden rotate-90 origin-top-right bg-secondary"
+          class="flex gap-2 overflow-x-hidden rotate-90 origin-top-right z-0"
         >
           <div
-            class="animate-marquee pt-1 text-white flex gap-2 whitespace-nowrap mr-2"
+            class="animate-marquee py-1 text-white flex gap-2 whitespace-nowrap bg-secondary z-0"
           >
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-          </div>
-          <div
-            class="absolute text-white pt-1 flex gap-2 top-0 animate-marquee2 whitespace-nowrap"
-          >
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
-            <span>Graffiti</span>
-            <span>//</span>
+            <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
+              <span>{{ text }} </span>
+              <span>//</span>
+            </div>
           </div>
         </div>
       </div>

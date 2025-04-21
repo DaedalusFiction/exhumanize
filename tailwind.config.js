@@ -26,19 +26,7 @@ module.exports = {
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
-        },
-        marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
-        },
-        marqueeReverse: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0%)" },
-        },
-        marquee2Reverse: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-30%)" },
         },
       },
       colors: {

@@ -4,7 +4,7 @@
       <div class="col-span-6">
         <LayoutCategoryPreview
           href="https://google.com"
-          text="This is the text"
+          text="Graffiti"
           :image="img"
         />
       </div>
