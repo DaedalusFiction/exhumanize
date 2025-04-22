@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="href">
     <div
-      class="relative bg-secondary overflow-hidden h-48 md:h-full"
+      class="relative aspect-[3/2] bg-secondary overflow-hidden h-48 md:h-full"
       @mouseenter="isHovering = true"
       @mouseleave="isHovering = false"
     >
@@ -10,11 +10,7 @@
         class="absolute inset-0 transition-all duration-300 ease-in-out z-50"
         :class="isHovering && 'inset-7'"
       >
-        <img
-          :src="image.src"
-          alt=""
-          class="w-full h-48 md:h-full object-cover"
-        />
+        <img :src="image.src" alt="" class="w-full h-full object-cover" />
       </div>
       <!-- top -->
       <div class="flex flex-col justify-between h-full">
@@ -23,7 +19,7 @@
             class="animate-marquee text-white flex gap-2 whitespace-nowrap bg-secondary z-10 py-1"
           >
             <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
-              <span>{{ text }} </span>
+              <span>{{ title }} </span>
               <span>//</span>
             </div>
           </div>
@@ -36,7 +32,7 @@
             class="animate-marquee text-white flex gap-2 whitespace-nowrap z-20"
           >
             <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
-              <span>{{ text }} </span>
+              <span>{{ title }} </span>
               <span>//</span>
             </div>
           </div>
@@ -51,7 +47,7 @@
             class="animate-marquee text-white flex gap-2 whitespace-nowrap py-1"
           >
             <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
-              <span>{{ text }} </span>
+              <span>{{ title }} </span>
               <span>//</span>
             </div>
           </div>
@@ -64,7 +60,7 @@
             class="animate-marquee py-1 text-white flex gap-2 whitespace-nowrap bg-secondary z-0"
           >
             <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
-              <span>{{ text }} </span>
+              <span>{{ title }} </span>
               <span>//</span>
             </div>
           </div>
@@ -75,7 +71,7 @@
 </template>
 
 <script setup>
-const { image, href, text } = defineProps(["image", "href", "text"]);
+const { image, href, title } = defineProps(["image", "href", "title"]);
 const isHovering = ref(false);
 const handleMouseEnter = () => {
   console.log("hi");
