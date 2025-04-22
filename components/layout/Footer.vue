@@ -53,7 +53,7 @@
     </div>
     <div class="md:flex gap-4 justify-between items-end">
       <div class="md:flex gap-6">
-        <p class="text-center md:text-start">&copy; 2024 {{ siteName }}</p>
+        <p class="text-center md:text-start">&copy; 2025 {{ siteName }}</p>
       </div>
       <div class="h-full flex justify-center items-end">
         <p class="text-center md:text-end">

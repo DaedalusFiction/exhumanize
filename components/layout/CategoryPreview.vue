@@ -1,7 +1,8 @@
 <template>
   <NuxtLink :to="href">
     <div
-      class="relative aspect-[3/2] bg-secondary overflow-hidden h-48 md:h-full"
+      class="relative aspect-[3/2] overflow-hidden h-48 md:h-full"
+      :style="{ backgroundColor }"
       @mouseenter="isHovering = true"
       @mouseleave="isHovering = false"
     >
@@ -16,7 +17,8 @@
       <div class="flex flex-col justify-between h-full">
         <div class="flex gap-2 overflow-x-hidden z-40 -translate-x-[1.75rem]">
           <div
-            class="animate-marquee text-white flex gap-2 whitespace-nowrap bg-secondary z-10 py-1"
+            class="animate-marquee text-white flex gap-2 whitespace-nowrap z-10 py-1"
+            :style="{ backgroundColor }"
           >
             <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
               <span>{{ title }} </span>
@@ -26,7 +28,8 @@
         </div>
         <!-- bottom  -->
         <div
-          class="bottom-0 flex gap-2 py-1 rotate-180 bg-secondary overflow-x-hidden z-20"
+          class="bottom-0 flex gap-2 py-1 rotate-180 overflow-x-hidden z-20"
+          :style="{ backgroundColor }"
         >
           <div
             class="animate-marquee text-white flex gap-2 whitespace-nowrap z-20"
@@ -40,7 +43,8 @@
       </div>
       <div class="flex flex-col justify-between">
         <div
-          class="flex gap-2 overflow-x-hidden -rotate-90 origin-top-left bg-secondary z-30"
+          class="flex gap-2 overflow-x-hidden -rotate-90 origin-top-left z-30"
+          :style="{ backgroundColor }"
         >
           <!-- left  -->
           <div
@@ -57,7 +61,8 @@
           class="flex gap-2 overflow-x-hidden rotate-90 origin-top-right z-0"
         >
           <div
-            class="animate-marquee py-1 text-white flex gap-2 whitespace-nowrap bg-secondary z-0"
+            class="animate-marquee py-1 text-white flex gap-2 whitespace-nowrap z-0"
+            :style="{ backgroundColor }"
           >
             <div class="flex gap-1" v-for="(item, index) in 20" :key="index">
               <span>{{ title }} </span>
@@ -71,7 +76,12 @@
 </template>
 
 <script setup>
-const { image, href, title } = defineProps(["image", "href", "title"]);
+const { image, href, title, backgroundColor } = defineProps([
+  "image",
+  "href",
+  "backgroundColor",
+  "title",
+]);
 const isHovering = ref(false);
 const handleMouseEnter = () => {
   console.log("hi");

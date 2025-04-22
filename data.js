@@ -1,7 +1,7 @@
 const siteName = "Exhumanize";
 const siteURL = "exhumanize.com";
 const siteDescription = "Portfolio of Street Photographer David Jack Sorensen";
-const GTag = "G-SXZDVWQGZX";
+const GTag = "G-NXV0KGQHF7";
 
 const pages = [
   { title: "Portfolio", href: "/portfolio" },

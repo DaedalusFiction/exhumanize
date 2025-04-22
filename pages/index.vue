@@ -7,6 +7,7 @@
         :key="index"
       >
         <LayoutCategoryPreview
+          :backgroundColor="category.backgroundColor"
           :href="category.href"
           :title="category.title"
           :image="category.image"
@@ -20,95 +21,90 @@
 const categories = [
   {
     title: "Graffiti",
-    href: "/categories/graffiti",
+    backgroundColor: "#a30000",
+    href: "/portfolio/graffiti",
     image: {
       src: "/images/graffittiConstruction.webp",
       alt: "Man walking by graffiti",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Angles",
+    backgroundColor: "#792359",
+    href: "/portfolio/angles",
     image: {
       src: "/images/kiddo.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Currency",
+    backgroundColor: "#3F7D20",
+    href: "/portfolio/currency",
     image: {
       src: "/images/dollaBills.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Transportation",
+    backgroundColor: "#F21B3F",
+    href: "/portfolio/transportation",
     image: {
       src: "/images/bikeLady.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Limbo",
+    backgroundColor: "#007EA7",
+    href: "/portfolio/limbo",
     image: {
       src: "/images/waitingGuys.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Preparations",
+    backgroundColor: "#6B2B06",
+    href: "/portfolio/preparations",
     image: {
       src: "/images/circusLady.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Radiance",
+    backgroundColor: "#662C91",
+    href: "/portfolio/radiance",
     image: {
       src: "/images/vent.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Characters",
+    backgroundColor: "#AD343E",
+    href: "/portfolio/characters",
     image: {
       src: "/images/downcast.webp",
       alt: "",
     },
   },
   {
-    title: "",
-    href: "/categories/",
+    title: "Cops",
+    backgroundColor: "#1F271B",
+    href: "/portfolio/cops",
     image: {
       src: "/images/cops.webp",
       alt: "",
     },
   },
+
   {
-    title: "",
-    href: "/categories/",
-    image: {
-      src: "/images/classCops.webp",
-      alt: "",
-    },
-  },
-  {
-    title: "",
-    href: "/categories/",
-    image: {
-      src: "/images/ladies.webp",
-      alt: "",
-    },
-  },
-  {
-    title: "",
-    href: "/categories/",
+    title: "Signage",
+    backgroundColor: "#064789",
+    href: "/portfolio/signage",
     image: {
       src: "/images/copFuel.webp",
       alt: "",
