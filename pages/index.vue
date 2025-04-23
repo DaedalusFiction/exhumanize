@@ -20,7 +20,7 @@
 <script setup>
 const categories = [
   {
-    title: "Graffiti",
+    title: "graffiti",
     backgroundColor: "#a30000",
     href: "/portfolio/graffiti",
     image: {
@@ -29,7 +29,7 @@ const categories = [
     },
   },
   {
-    title: "Angles",
+    title: "angles",
     backgroundColor: "#792359",
     href: "/portfolio/angles",
     image: {
@@ -38,7 +38,7 @@ const categories = [
     },
   },
   {
-    title: "Currency",
+    title: "currency",
     backgroundColor: "#3F7D20",
     href: "/portfolio/currency",
     image: {
@@ -47,7 +47,7 @@ const categories = [
     },
   },
   {
-    title: "Shadows",
+    title: "shadows",
     backgroundColor: "#064789",
     href: "/portfolio/shadows",
     image: {
@@ -56,7 +56,7 @@ const categories = [
     },
   },
   {
-    title: "Limbo",
+    title: "limbo",
     backgroundColor: "#007EA7",
     href: "/portfolio/limbo",
     image: {
@@ -65,7 +65,7 @@ const categories = [
     },
   },
   {
-    title: "Transportation",
+    title: "transportation",
     backgroundColor: "#F21B3F",
     href: "/portfolio/transportation",
     image: {
@@ -74,7 +74,7 @@ const categories = [
     },
   },
   {
-    title: "Preparations",
+    title: "preparations",
     backgroundColor: "#6B2B06",
     href: "/portfolio/preparations",
     image: {
@@ -83,7 +83,7 @@ const categories = [
     },
   },
   {
-    title: "Radiance",
+    title: "radiance",
     backgroundColor: "#662C91",
     href: "/portfolio/radiance",
     image: {
@@ -92,7 +92,7 @@ const categories = [
     },
   },
   {
-    title: "Characters",
+    title: "characters",
     backgroundColor: "#AD343E",
     href: "/portfolio/characters",
     image: {
@@ -101,7 +101,7 @@ const categories = [
     },
   },
   {
-    title: "Cops",
+    title: "cops",
     backgroundColor: "#1F271B",
     href: "/portfolio/cops",
     image: {

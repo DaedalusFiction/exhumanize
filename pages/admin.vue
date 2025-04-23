@@ -24,12 +24,7 @@
           </div>
         </div>
         <div class="col-span-10 p-3">
-          <AdminBanner v-if="selectedPanel === 'Banner Message'" />
-          <AdminEventList v-if="selectedPanel === 'Events'" />
-          <AdminArticleList v-if="selectedPanel === 'Articles'" />
-          <AdminContributorList v-if="selectedPanel === 'Contributors'" />
-          <AdminBookList v-if="selectedPanel === 'Portfolio'" />
-          <AdminVideoList v-if="selectedPanel === 'Videos'" />
+          <AdminPhotographList v-if="selectedPanel === 'Portfolio'" />
         </div>
       </div>
     </div>
@@ -42,23 +37,13 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { ref, markRaw } from "vue";
 import bookIcon from "~/components/icons/Book.vue";
-import userIcon from "~/components/icons/User.vue";
-import { AdminBanner } from "#components";
 
 definePageMeta({
   layout: "admin",
 });
 const admin = ref(false);
-const envelopeIcon = markRaw(resolveComponent("IconsEnvelope"));
-const menu = ref([
-  { name: "Events", icon: envelopeIcon },
-  { name: "Articles", icon: bookIcon },
-  { name: "Contributors", icon: userIcon },
-  { name: "Portfolio", icon: userIcon },
-  { name: "Videos", icon: userIcon },
-  { name: "Banner Message", icon: userIcon },
-]);
-const selectedPanel = ref("Events");
+const menu = ref([{ name: "Portfolio", icon: bookIcon }]);
+const selectedPanel = ref("Portfolio");
 
 const handleSignIn = async () => {
   const user = await login();

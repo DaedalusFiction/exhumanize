@@ -1,28 +1,24 @@
 <template>
-  <div class="card">
+  <div class="">
     <div class="mb-4">
-      <label for="name"> Name </label>
-      <input id="name" v-model="formData.name" required type="text" />
-    </div>
-
-    <div class="mb-4">
-      <label for="text"> Bio </label>
-      <textarea
-        id="bio"
-        v-model="formData.bio"
-        rows="4"
-        class="block p-2.5 w-full bg-gray-50 shadow rounded-lg border"
-      />
+      <label for="category"> Category </label>
+      <select id="category" v-model="formData.category" required>
+        <option value="angles">Angles</option>
+      </select>
     </div>
 
     <AdminImageSelector v-model:model-value="imageFile" />
+    <div class="mb-4">
+      <label for="alt"> Alternate Text </label>
+      <input type="text" v-model="formData.alt" />
+    </div>
 
     <div class="flex gap-2">
       <button class="btn" @click="submitForm">
-        <p>{{ contributor ? "Update" : "Submit" }}</p>
+        {{ photograph ? "Update" : "Submit" }}
       </button>
-      <button v-if="contributor" class="btn" @click="handleDeleteDocument">
-        <p>Delete</p>
+      <button v-if="photograph" class="btn" @click="handleDeleteDocument">
+        Delete
       </button>
     </div>
   </div>
@@ -35,41 +31,51 @@ import useUploadDocument from "~/composables/admin/uploadDocument";
 import useUpdateDocument from "~/composables/admin/updateDocument";
 import useSnackbar from "~/composables/showSnackbar";
 import { db } from "~/firebase.config";
-const { contributor } = defineProps(["contributor"]);
+const { photograph } = defineProps(["photograph"]);
 const emptyForm = {
-  name: "",
-  bio: "",
+  category: "",
+  alt: "",
 };
 const formData = ref(emptyForm);
 const imageFile = ref(null);
 
 onMounted(() => {
-  if (contributor) {
+  if (photograph) {
     formData.value = {
-      name: contributor.data().name,
-      bio: contributor.data().bio,
+      category: photograph.data().category,
+      alt: photograph.data().alt,
     };
   }
 });
 
 const submitForm = async () => {
-  if (contributor) {
+  if (photograph) {
     await useUpdateDocument(
-      "contributors",
+      `photographs/categories/${photograph.data().category}`,
       formData.value,
       imageFile.value,
-      contributor.id
+      photograph.id
     );
     emit("update");
   } else {
-    await useUploadDocument("contributors", formData.value, imageFile.value);
+    await useUploadDocument(
+      `photographs/categories/${formData.value.category}`,
+      formData.value,
+      imageFile.value
+    );
 
     emit("update");
   }
 };
 const handleDeleteDocument = async () => {
   try {
-    await deleteDoc(doc(db, "contributors", contributor.id));
+    await deleteDoc(
+      doc(
+        db,
+        `photographs/categories/${photograph.data().category}`,
+        photograph.id
+      )
+    );
     useSnackbar("Document successfully deleted");
     emit("update");
   } catch {

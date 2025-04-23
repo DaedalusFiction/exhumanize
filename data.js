@@ -9,6 +9,99 @@ const pages = [
   { title: "Contact", href: "/contact" },
 ];
 
+const projects = [
+  {
+    title: "Graffiti",
+    backgroundColor: "#a30000",
+    href: "/portfolio/graffiti",
+    image: {
+      src: "/images/graffittiConstruction.webp",
+      alt: "Man walking by graffiti",
+    },
+  },
+  {
+    title: "angles",
+    backgroundColor: "#792359",
+    href: "/portfolio/angles",
+    image: {
+      src: "/images/kiddo.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Currency",
+    backgroundColor: "#3F7D20",
+    href: "/portfolio/currency",
+    image: {
+      src: "/images/dollaBills.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Shadows",
+    backgroundColor: "#064789",
+    href: "/portfolio/shadows",
+    image: {
+      src: "/images/shadeLady.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Limbo",
+    backgroundColor: "#007EA7",
+    href: "/portfolio/limbo",
+    image: {
+      src: "/images/waitingGuys.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Transportation",
+    backgroundColor: "#F21B3F",
+    href: "/portfolio/transportation",
+    image: {
+      src: "/images/bikeLady.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Preparations",
+    backgroundColor: "#6B2B06",
+    href: "/portfolio/preparations",
+    image: {
+      src: "/images/circusLady.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Radiance",
+    backgroundColor: "#662C91",
+    href: "/portfolio/radiance",
+    image: {
+      src: "/images/vent.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Characters",
+    backgroundColor: "#AD343E",
+    href: "/portfolio/characters",
+    image: {
+      src: "/images/downcast.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Cops",
+    backgroundColor: "#1F271B",
+    href: "/portfolio/cops",
+    image: {
+      src: "/images/cops.webp",
+      alt: "",
+    },
+  },
+];
+
 const socialMediaLinks = [
   { title: "Facebook", href: "https://facebook.com" },
   { title: "Twitter", href: "https://google.com" },
@@ -23,6 +116,7 @@ export {
   siteDescription,
   siteURL,
   pages,
+  projects,
   socialMediaLinks,
   telephone,
 };
