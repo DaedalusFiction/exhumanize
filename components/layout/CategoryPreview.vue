@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="href">
     <div
-      class="relative aspect-[3/2] overflow-hidden h-48 md:h-full"
+      class="relative aspect-[3/2] overflow-hidden h-full"
       :style="{ backgroundColor }"
       @mouseenter="isHovering = true"
       @mouseleave="isHovering = false"

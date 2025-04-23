@@ -47,11 +47,11 @@ const categories = [
     },
   },
   {
-    title: "Transportation",
-    backgroundColor: "#F21B3F",
-    href: "/portfolio/transportation",
+    title: "Shadows",
+    backgroundColor: "#064789",
+    href: "/portfolio/shadows",
     image: {
-      src: "/images/bikeLady.webp",
+      src: "/images/shadeLady.webp",
       alt: "",
     },
   },
@@ -61,6 +61,15 @@ const categories = [
     href: "/portfolio/limbo",
     image: {
       src: "/images/waitingGuys.webp",
+      alt: "",
+    },
+  },
+  {
+    title: "Transportation",
+    backgroundColor: "#F21B3F",
+    href: "/portfolio/transportation",
+    image: {
+      src: "/images/bikeLady.webp",
       alt: "",
     },
   },
@@ -97,16 +106,6 @@ const categories = [
     href: "/portfolio/cops",
     image: {
       src: "/images/cops.webp",
-      alt: "",
-    },
-  },
-
-  {
-    title: "Signage",
-    backgroundColor: "#064789",
-    href: "/portfolio/signage",
-    image: {
-      src: "/images/copFuel.webp",
       alt: "",
     },
   },
