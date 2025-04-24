@@ -4,14 +4,14 @@ const siteDescription = "Portfolio of Street Photographer David Jack Sorensen";
 const GTag = "G-NXV0KGQHF7";
 
 const pages = [
-  { title: "Portfolio", href: "/portfolio" },
-  { title: "About", href: "/about" },
-  { title: "Contact", href: "/contact" },
+  { title: "portfolio", href: "/portfolio" },
+  { title: "about", href: "/about" },
+  { title: "contact", href: "/contact" },
 ];
 
 const projects = [
   {
-    title: "Graffiti",
+    title: "graffiti",
     backgroundColor: "#a30000",
     href: "/portfolio/graffiti",
     image: {
@@ -29,7 +29,7 @@ const projects = [
     },
   },
   {
-    title: "Currency",
+    title: "currency",
     backgroundColor: "#3F7D20",
     href: "/portfolio/currency",
     image: {
@@ -38,7 +38,7 @@ const projects = [
     },
   },
   {
-    title: "Shadows",
+    title: "shadows",
     backgroundColor: "#064789",
     href: "/portfolio/shadows",
     image: {
@@ -47,7 +47,7 @@ const projects = [
     },
   },
   {
-    title: "Limbo",
+    title: "limbo",
     backgroundColor: "#007EA7",
     href: "/portfolio/limbo",
     image: {
@@ -56,7 +56,7 @@ const projects = [
     },
   },
   {
-    title: "Transportation",
+    title: "transportation",
     backgroundColor: "#F21B3F",
     href: "/portfolio/transportation",
     image: {
@@ -65,7 +65,7 @@ const projects = [
     },
   },
   {
-    title: "Preparations",
+    title: "preparations",
     backgroundColor: "#6B2B06",
     href: "/portfolio/preparations",
     image: {
@@ -74,7 +74,7 @@ const projects = [
     },
   },
   {
-    title: "Radiance",
+    title: "radiance",
     backgroundColor: "#662C91",
     href: "/portfolio/radiance",
     image: {
@@ -83,7 +83,7 @@ const projects = [
     },
   },
   {
-    title: "Characters",
+    title: "characters",
     backgroundColor: "#AD343E",
     href: "/portfolio/characters",
     image: {
@@ -92,7 +92,7 @@ const projects = [
     },
   },
   {
-    title: "Cops",
+    title: "cops",
     backgroundColor: "#1F271B",
     href: "/portfolio/cops",
     image: {
@@ -103,8 +103,6 @@ const projects = [
 ];
 
 const socialMediaLinks = [
-  { title: "Facebook", href: "https://facebook.com" },
-  { title: "Twitter", href: "https://google.com" },
   { title: "Instagram", href: "https://Instagram.com" },
 ];
 

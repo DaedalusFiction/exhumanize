@@ -5,48 +5,26 @@
       class="flex flex-col md:grid grid-cols-12 px-3 gap-6 mx-auto max-w-screen-2xl"
     >
       <div class="col-span-6">
-        <p class="md:text-3xl mb-3 md:mb-12">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
-          harum. Id, asperiores.
-        </p>
-
         <div class="flex flex-col md:grid grid-cols-12 gap-6">
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
-              Call us
-            </h6>
-
-            <p class="text-xl link">
-              <a :href="`tel:` + telephone">{{
-                useFormatTelephone(telephone)
-              }}</a>
-            </p>
+            <h6 class="text-darkMuted dark:text-lightMuted">Call me</h6>
+            <a :href="`tel:` + telephone">{{
+              useFormatTelephone(telephone)
+            }}</a>
           </div>
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
-              Email us
-            </h6>
-            <p class="text-xl">hello@fictionalweb.com</p>
+            <h6 class="text-darkMuted dark:text-lightMuted">Email me</h6>
+            <a href="mailto:hello@fictionalweb.com">hello@fictionalweb.com</a>
           </div>
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
-              Follow us
-            </h6>
+            <h6 class="text-darkMuted dark:text-lightMuted">Follow me</h6>
             <div>
-              <p class="text-xl">Instagram</p>
-            </div>
-            <div>
-              <p class="text-xl">Facebook</p>
-            </div>
-            <div>
-              <p class="text-xl">Twitter</p>
+              <a href="https://instagram.com">instagram</a>
             </div>
           </div>
           <div class="col-span-6">
-            <h6 class="text-xs font-medium text-darkMuted dark:text-lightMuted">
-              Fax us
-            </h6>
-            <p class="text-xl">please don't</p>
+            <h6 class="text-darkMuted dark:text-lightMuted">Fax me</h6>
+            <a href="/">please don't</a>
           </div>
         </div>
       </div>
@@ -73,7 +51,7 @@
           />
           <label class="hidden" for="email">Email</label>
           <textarea
-            placeholder="Tell us a bit about what's on your mind..."
+            placeholder="What's on your mind?"
             v-model="comment"
             class="placeholder-dark border px-3 my-3"
             id="comment"

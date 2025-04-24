@@ -1,6 +1,7 @@
 <template>
   <footer
-    class="p-3 mt-12 bg-backgroundAccent dark:bg-backgroundAccentDarkMode border-t"
+    :class="selectedImage && 'blur-md'"
+    class="p-3 mt-12 z-40 bg-backgroundAccent dark:bg-backgroundAccentDarkMode border-t"
   >
     <div
       class="flex flex-col max-w-screen-2xl mx-auto py-8 gap-4 md:grid grid-cols-12"
@@ -15,7 +16,7 @@
       </div>
       <div class="col-span-3">
         <h6 class="text-lg mb-2 text-primary dark:text-primaryDarkMode">
-          Follow Us
+          follow
         </h6>
         <p
           class="mb-1"
@@ -31,10 +32,7 @@
           Newsletter
         </h6>
         <div v-if="!emailSubmitted">
-          <p class="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-            molestias, laudantium facere fuga impedit recusandae?
-          </p>
+          <p class="mb-4">Stay up-to-date on new projects</p>
           <div class="flex sm:flex-col lg:flex-row gap-2">
             <input
               type="text"
@@ -70,9 +68,10 @@
 </template>
 
 <script setup>
-import { addDoc, arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { pages, siteName, socialMediaLinks } from "~/data";
 import { db } from "~/firebase.config";
+const selectedImage = useState("selectedImage");
 const email = ref("");
 const emailSubmitted = ref(false);
 

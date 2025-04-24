@@ -1,10 +1,8 @@
 <template>
-  <header class="fixed w-full top-0 z-20">
+  <header :class="selectedImage && 'blur-md'" class="fixed w-full top-0 z-20">
     <div>
-      <div
-        class="hidden xl:flex items-center justify-between gap-3 px-4 py-2 mx-auto"
-      >
-        <div class="flex gap-4 items-center">
+      <div class="hidden xl:grid grid-cols-12 gap-3 px-4 py-2 mx-auto">
+        <div class="col-span-6 flex gap-4 items-center">
           <h1 class="whitespace-nowrap text-2xl">
             <NuxtLink class="text-lg" to="/">
               <span class="text-primary dark:text-primaryDarkMode">X</span>
@@ -14,13 +12,15 @@
             </NuxtLink>
           </h1>
         </div>
-        <NuxtLink
-          v-for="item in pages"
-          :key="item"
-          class="link mix-blend-difference"
-          :href="item.href"
-          >{{ item.title }}</NuxtLink
-        >
+        <div class="col-span-6 flex justify-between">
+          <NuxtLink
+            v-for="item in pages"
+            :key="item"
+            class="link mix-blend-difference"
+            :href="item.href"
+            >{{ item.title }}</NuxtLink
+          >
+        </div>
       </div>
       <div class="p-2 mx-auto flex xl:hidden justify-between items-center">
         <button
@@ -56,6 +56,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { pages } from "~/data";
+const selectedImage = useState("selectedImage");
 const navigationExpanded = useState("navigationExpanded");
 
 const isScrolled = ref(false);

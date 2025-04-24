@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col bg-background justify-between">
-    <div class="relative z-0" @click="handleCloseMenus">
+  <div class="relative flex flex-col bg-background justify-between">
+    <div @click="handleCloseMenus">
       <LayoutNavigation />
       <div class="max-w-screen-2xl mx-auto">
         <slot />
       </div>
     </div>
-    <FeedbackSnackBar />
     <LayoutFooter />
+    <FeedbackSnackBar />
   </div>
 </template>
 
