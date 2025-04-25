@@ -38,14 +38,17 @@
   <Transition>
     <nav
       v-if="navigationExpanded"
-      class="fixed top-14 rounded border bg-background dark:bg-backgroundDarkMode transition-colors duration-50 min-w-40 flex items-center py-4 z-10"
+      class="fixed top-0 left-0 w-screen h-screen bg-background dark:bg-backgroundDarkMode transition-colors duration-50 flex items-center py-4 z-50"
       :class="navigationExpanded && 'navigationExpanded'"
     >
       <ul class="">
         <li class="my-2" v-for="item in pages" :key="item.href">
-          <NuxtLink :to="item.href" @click="handleExpandNavigation">{{
-            item.title
-          }}</NuxtLink>
+          <NuxtLink
+            :to="item.href"
+            class="text-3xl font-bo"
+            @click="handleExpandNavigation"
+            >{{ item.title }}</NuxtLink
+          >
         </li>
       </ul>
     </nav>

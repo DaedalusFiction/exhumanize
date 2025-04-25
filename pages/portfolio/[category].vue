@@ -22,7 +22,7 @@
   </div>
   <div
     v-if="selectedImage"
-    class="fixed z-50 top-0 left-0 h-screen w-screen flex justify-center items-center blur-0"
+    class="fixed z-40 top-0 left-0 h-screen w-screen flex justify-center items-center blur-0"
   >
     <div @click="selectedImage = null" class="relative cursor-pointer">
       <img :src="selectedImage.image.src" alt="" class="z-40" />

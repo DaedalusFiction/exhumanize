@@ -8,19 +8,7 @@
       @mouseleave="isHovering = false"
     >
       <!-- Image container with transition-all -->
-      <div
-        class="absolute inset-0 transition-all duration-300 ease-in-out z-50"
-        :class="{ 'inset-7': isHovering }"
-      >
-        <img
-          ref="imageRef"
-          @load="loaded = true"
-          :src="image.src"
-          alt=""
-          class="w-full h-full object-cover transition-all"
-          :class="isHovering && `rounded-xl`"
-        />
-      </div>
+
       <!-- top -->
       <div v-if="loaded" class="flex flex-col justify-between h-full">
         <div class="flex gap-6 overflow-x-hidden z-40 -translate-x-[1.75rem]">
@@ -79,6 +67,19 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="absolute inset-0 transition-all duration-300 ease-in-out z-40"
+        :class="{ 'inset-7': isHovering }"
+      >
+        <img
+          ref="imageRef"
+          @load="loaded = true"
+          :src="image.src"
+          alt=""
+          class="w-full h-full object-cover transition-all"
+          :class="isHovering && `rounded-xl`"
+        />
       </div>
     </div>
   </NuxtLink>
