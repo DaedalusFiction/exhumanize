@@ -18,11 +18,7 @@
         <h6 class="text-lg mb-2 text-primary dark:text-primaryDarkMode">
           follow
         </h6>
-        <p
-          class="mb-1"
-          v-for="(link, index) in socialMediaLinks"
-          :key="link.title"
-        >
+        <p class="mb-1" v-for="(link, index) in socialMediaLinks" :key="index">
           <NuxtLink :to="link.href" class="link">{{ link.title }}</NuxtLink>
         </p>
       </div>
@@ -56,10 +52,8 @@
       <div class="h-full flex justify-center items-end">
         <p class="text-center md:text-end">
           Website created by
-          <a
-            class="hover:underline text-primary dark:text-primaryDarkMode"
-            href="https://fictionalweb.com"
-            >Fictional Web</a
+          <NuxtLink class="link underline" href="https://fictionalweb.com"
+            >Fictional Web</NuxtLink
           >
         </p>
       </div>

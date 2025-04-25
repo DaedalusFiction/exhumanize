@@ -15,8 +15,8 @@
   --color-background: #f7f0f0;
   --color-background-accent: #e3dbdc;
 
-  --font-header: Montserrat;
-  --font-sans: Karla;
+  --font-header: Chivo;
+  --font-sans: Quicksand;
 }
 
 body {
@@ -29,12 +29,12 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-header text-xl font-light dark:text-light uppercase;
+  @apply font-header text-xl  dark:text-light uppercase tracking-tighter;
 }
 
 p,
 a {
-  @apply font-sans text-sm font-bold text-dark dark:text-light;
+  @apply font-sans text-sm  text-dark dark:text-light;
 }
 
 li {
@@ -86,7 +86,7 @@ label {
   }
 
   .link {
-    @apply hover:text-primary dark:hover:text-primaryDarkMode transition;
+    @apply hover:text-secondary dark:hover:text-primaryDarkMode transition;
   }
 
   .btn:hover {
@@ -120,6 +120,10 @@ label {
   }
 }
 /* pairings */
+@font-face {
+  font-family: Chivo;
+  src: url("~/assets/fonts/Chivo.woff2") format("woff2");
+}
 @font-face {
   font-family: Karla;
   src: url("~/assets/fonts/Karla.woff2") format("woff2");
