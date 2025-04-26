@@ -3,7 +3,13 @@
     <div class="mb-4">
       <label for="category"> Category </label>
       <select id="category" v-model="formData.category" required>
-        <option value="angles">Angles</option>
+        <option
+          v-for="(project, index) in projects"
+          :key="index"
+          :value="project.title"
+        >
+          {{ project.title }}
+        </option>
       </select>
     </div>
 
@@ -31,6 +37,7 @@ import useUploadDocument from "~/composables/admin/uploadDocument";
 import useUpdateDocument from "~/composables/admin/updateDocument";
 import useSnackbar from "~/composables/showSnackbar";
 import { db } from "~/firebase.config";
+import { projects } from "~/data";
 const { photograph } = defineProps(["photograph"]);
 const emptyForm = {
   category: "",
