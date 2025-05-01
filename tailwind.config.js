@@ -18,15 +18,17 @@ module.exports = {
     },
     extend: {
       animation: {
-        marquee: "marquee 25s linear infinite",
-        marquee2: "marquee2 25s linear infinite",
-        marqueeReverse: "marqueeReverse 25s linear infinite",
-        marquee2Reverse: "marquee2Reverse 25s linear infinite",
+        marquee: "marquee 95s linear infinite",
+        marqueeVertical: "marqueeVertical 95s linear infinite",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-30%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        marqueeVertical: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0%)" },
         },
       },
       colors: {

@@ -1,8 +1,12 @@
 <template>
   <NuxtLink :to="href">
     <div
-      class="relative aspect-[3/2] overflow-hidden h-full transition-all"
-      :class="isHovering && `rounded-xl`"
+      class="relative overflow-hidden h-full transition-all"
+      :class="{
+        'rounded-xl': isHovering,
+        'aspect-[3/2]': image.orientation === 'landscape',
+        'aspect-[2/3]': image.orientation !== 'landscape',
+      }"
       :style="{ backgroundColor }"
       @mouseenter="isHovering = true"
       @mouseleave="isHovering = false"
@@ -16,7 +20,7 @@
             class="animate-marquee text-white flex gap-6 whitespace-nowrap z-10 py-1"
             :style="{ backgroundColor }"
           >
-            <div class="flex gap-6" v-for="(item, index) in 20" :key="index">
+            <div class="flex gap-6" v-for="(item, index) in 40" :key="index">
               <span class="uppercase">{{ title }}</span>
               <span>//</span>
             </div>
@@ -31,23 +35,32 @@
           <div
             class="animate-marquee text-white flex gap-6 whitespace-nowrap z-20"
           >
-            <div class="flex gap-6" v-for="(item, index) in 20" :key="index">
+            <div class="flex gap-6" v-for="(item, index) in 40" :key="index">
               <span class="uppercase">{{ title }}</span>
               <span>//</span>
             </div>
           </div>
         </div>
       </div>
-      <div v-if="loaded" class="flex flex-col justify-between">
+      <div v-if="loaded" class="flex absolute top-0 w-full justify-between">
         <div
-          class="flex gap-6 overflow-x-hidden -rotate-90 origin-top-left z-30"
-          :style="{ backgroundColor }"
+          id="leftmarquee"
+          class="flex gap-6 px-1 z-30"
+          :style="{
+            backgroundColor: backgroundColor,
+          }"
         >
-          <!-- left  -->
           <div
-            class="animate-marquee text-white flex gap-6 whitespace-nowrap py-1"
+            class="animate-marqueeVertical text-white flex z-50 flex-col gap-6 whitespace-nowrap py-1"
           >
-            <div class="flex gap-6" v-for="(item, index) in 20" :key="index">
+            <div
+              class="flex gap-6"
+              v-for="(item, index) in 40"
+              :key="index"
+              :style="{
+                writingMode: 'sideways-lr',
+              }"
+            >
               <span class="uppercase">{{ title }}</span>
               <span>//</span>
             </div>
@@ -55,15 +68,26 @@
         </div>
         <!-- right  -->
         <div
-          class="flex gap-6 overflow-x-hidden rotate-90 origin-top-right z-0"
+          id="rightmarquee"
+          class="z-40 px-1"
+          :style="{
+            backgroundColor: backgroundColor,
+          }"
         >
           <div
-            class="animate-marquee py-1 text-white flex gap-6 whitespace-nowrap z-0"
-            :style="{ backgroundColor }"
+            class="animate-marqueeVertical text-white flex z-50 flex-col gap-6 whitespace-nowrap py-1"
+            :style="{ animationDirection: 'reverse' }"
           >
-            <div class="flex gap-6" v-for="(item, index) in 20" :key="index">
+            <div
+              class="flex gap-6"
+              v-for="(item, index) in 40"
+              :key="index"
+              :style="{
+                writingMode: 'sideways-lr',
+              }"
+            >
               <span class="uppercase">{{ title }}</span>
-              <span>//</span>
+              <span>///</span>
             </div>
           </div>
         </div>

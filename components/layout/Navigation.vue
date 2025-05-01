@@ -2,20 +2,21 @@
   <header :class="selectedImage && 'blur-md'" class="fixed w-full top-0 z-20">
     <div>
       <div class="hidden lg:grid grid-cols-12 gap-3 px-4 py-2 mx-auto">
-        <div class="col-span-6 flex justify-center">
+        <div class="col-span-6 flex gap-3 items-center">
           <NuxtLink
-            class="whitespace-nowrap text-2xl font-bold transition-all hover:tracking-widest"
+            class="whitespace-nowrap text-2xl font-bold transition-all"
             to="/"
           >
             <span class="text-primary dark:text-primaryDarkMode">X</span>
             <span class="text-secondary dark:text-secondaryDarkMode">HMNZ</span>
           </NuxtLink>
+          <p>the street photography of David J. Sorensen</p>
         </div>
         <div class="col-span-6 flex justify-between items-center">
           <NuxtLink
             v-for="item in pages"
             :key="item"
-            class="link mix-blend-difference"
+            class="link mix-blend-difference font-bold"
             :href="item.href"
             >{{ item.title }}</NuxtLink
           >

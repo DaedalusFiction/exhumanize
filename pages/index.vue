@@ -1,8 +1,11 @@
 <template>
   <div class="max-w-screen-2xl mx-auto">
-    <div class="flex flex-col p-2 pt-12 md:grid grid-cols-12 gap-2">
+    <div class="flex flex-col p-2 pt-12 md:grid grid-cols-5 gap-2">
       <div
-        class="col-span-6"
+        :class="{
+          'row-span-2 col-span-3': category.image.orientation === 'landscape',
+          'row-span-3 col-span-2': category.image.orientation === 'portrait',
+        }"
         v-for="(category, index) in categories"
         :key="index"
       >
@@ -20,12 +23,23 @@
 <script setup>
 const categories = [
   {
-    title: "graffiti",
-    backgroundColor: "#a30000",
-    href: "/portfolio/graffiti",
+    title: "shadows",
+    backgroundColor: "#064789",
+    href: "/portfolio/shadows",
     image: {
-      src: "/images/graffittiConstruction.webp",
-      alt: "Man walking by graffiti",
+      src: "/images/shadeLady.webp",
+      alt: "",
+      orientation: "landscape",
+    },
+  },
+  {
+    title: "radiance",
+    backgroundColor: "#662C91",
+    href: "/portfolio/radiance",
+    image: {
+      src: "/images/orangeWig.webp",
+      alt: "",
+      orientation: "portrait",
     },
   },
   {
@@ -35,6 +49,7 @@ const categories = [
     image: {
       src: "/images/kiddo.webp",
       alt: "",
+      orientation: "landscape",
     },
   },
   {
@@ -44,15 +59,27 @@ const categories = [
     image: {
       src: "/images/dollaBills.webp",
       alt: "",
+      orientation: "landscape",
     },
   },
   {
-    title: "shadows",
-    backgroundColor: "#064789",
-    href: "/portfolio/shadows",
+    title: "graffiti",
+    backgroundColor: "#a30000",
+    href: "/portfolio/graffiti",
     image: {
-      src: "/images/shadeLady.webp",
+      src: "/images/cokeWall.webp",
+      alt: "Man walking by graffiti",
+      orientation: "portrait",
+    },
+  },
+  {
+    title: "crosswalks",
+    backgroundColor: "#1F271B",
+    href: "/portfolio/cops",
+    image: {
+      src: "/images/crosswalkDresses.webp",
       alt: "",
+      orientation: "portrait",
     },
   },
   {
@@ -60,8 +87,9 @@ const categories = [
     backgroundColor: "#007EA7",
     href: "/portfolio/limbo",
     image: {
-      src: "/images/waitingGuys.webp",
+      src: "/images/gardenSitter.webp",
       alt: "",
+      orientation: "landscape",
     },
   },
   {
@@ -71,6 +99,7 @@ const categories = [
     image: {
       src: "/images/bikeLady.webp",
       alt: "",
+      orientation: "landscape",
     },
   },
   {
@@ -80,15 +109,7 @@ const categories = [
     image: {
       src: "/images/circusLady.webp",
       alt: "",
-    },
-  },
-  {
-    title: "radiance",
-    backgroundColor: "#662C91",
-    href: "/portfolio/radiance",
-    image: {
-      src: "/images/vent.webp",
-      alt: "",
+      orientation: "landscape",
     },
   },
   {
@@ -96,17 +117,9 @@ const categories = [
     backgroundColor: "#AD343E",
     href: "/portfolio/characters",
     image: {
-      src: "/images/downcast.webp",
+      src: "/images/stoolShirts.webp",
       alt: "",
-    },
-  },
-  {
-    title: "cops",
-    backgroundColor: "#1F271B",
-    href: "/portfolio/cops",
-    image: {
-      src: "/images/cops.webp",
-      alt: "",
+      orientation: "landscape",
     },
   },
 ];
