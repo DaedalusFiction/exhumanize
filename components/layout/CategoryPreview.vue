@@ -4,16 +4,11 @@
       class="relative overflow-hidden h-full transition-all"
       :class="{
         'rounded-xl': isHovering,
-        'aspect-[3/2]': image.orientation === 'landscape',
-        'aspect-[2/3]': image.orientation !== 'landscape',
       }"
       :style="{ backgroundColor }"
       @mouseenter="isHovering = true"
       @mouseleave="isHovering = false"
     >
-      <!-- Image container with transition-all -->
-
-      <!-- top -->
       <div v-if="loaded" class="flex flex-col justify-between h-full">
         <div class="flex gap-6 overflow-x-hidden z-40 -translate-x-[1.75rem]">
           <div
@@ -22,22 +17,21 @@
           >
             <div class="flex gap-6" v-for="(item, index) in 40" :key="index">
               <span class="uppercase">{{ title }}</span>
-              <span>//</span>
+              <span>////</span>
             </div>
           </div>
         </div>
-        <!-- bottom  -->
         <div
           v-if="loaded"
-          class="bottom-0 flex gap-6 py-1 rotate-180 overflow-x-hidden z-20"
+          class="relative z-30 bottom-0 flex gap-6 py-1 rotate-180 overflow-x-hidden"
           :style="{ backgroundColor }"
         >
           <div
-            class="animate-marquee text-white flex gap-6 whitespace-nowrap z-20"
+            class="animate-marquee text-white flex gap-6 whitespace-nowrap z-40"
           >
             <div class="flex gap-6" v-for="(item, index) in 40" :key="index">
               <span class="uppercase">{{ title }}</span>
-              <span>//</span>
+              <span>////</span>
             </div>
           </div>
         </div>
@@ -62,20 +56,19 @@
               }"
             >
               <span class="uppercase">{{ title }}</span>
-              <span>//</span>
+              <span>////</span>
             </div>
           </div>
         </div>
-        <!-- right  -->
         <div
           id="rightmarquee"
-          class="z-40 px-1"
+          class="relative z-10 px-1"
           :style="{
             backgroundColor: backgroundColor,
           }"
         >
           <div
-            class="animate-marqueeVertical text-white flex z-50 flex-col gap-6 whitespace-nowrap py-1"
+            class="animate-marqueeVertical text-white flex flex-col gap-6 whitespace-nowrap py-1"
             :style="{ animationDirection: 'reverse' }"
           >
             <div
@@ -83,17 +76,17 @@
               v-for="(item, index) in 40"
               :key="index"
               :style="{
-                writingMode: 'sideways-lr',
+                writingMode: 'vertical-lr',
               }"
             >
               <span class="uppercase">{{ title }}</span>
-              <span>///</span>
+              <span>////</span>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="absolute inset-0 transition-all duration-300 ease-in-out z-40"
+        class="absolute inset-0 transition-all duration-300 ease-in-out z-50"
         :class="{ 'inset-7': isHovering }"
       >
         <img
@@ -102,7 +95,25 @@
           :src="image.src"
           alt=""
           class="w-full h-full object-cover transition-all"
-          :class="isHovering && `rounded-xl`"
+          :class="{
+            'rounded-xl': isHovering,
+            'aspect-[3/2]': image.orientation === 'landscape',
+            'aspect-[2/3]': image.orientation !== 'landscape',
+          }"
+        />
+      </div>
+      <div class="z-10" :class="{ 'inset-7': isHovering }">
+        <img
+          ref="imageRef"
+          @load="loaded = true"
+          :src="image.src"
+          alt=""
+          class="opacity-0"
+          :class="{
+            'rounded-xl': isHovering,
+            'aspect-[3/2]': image.orientation === 'landscape',
+            'aspect-[2/3]': image.orientation !== 'landscape',
+          }"
         />
       </div>
     </div>
